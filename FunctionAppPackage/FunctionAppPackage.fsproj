@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <FSharpCoreImplicitPackageVersion>6.0.*</FSharpCoreImplicitPackageVersion>
+    <NoWarn>FS0020</NoWarn>
+    <RootNamespace>FunctionApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="FunctionAppPackage.fs" />
+    <Compile Include="ComputationalExpression.fs" />
+    <Compile Include="Program.fs" />
+    <None Include="Pulumi.yaml" />
+    <None Include="Pulumi.dev.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pulumi.FSharp.AzureNative" Version="1.53.0.12" />
+    <PackageReference Update="FSharp.Core" Version="6.0.1" />
+    <PackageReference Include="Pulumi.FSharp.Core" Version="3.0.2" />
+  </ItemGroup>
+
+</Project>

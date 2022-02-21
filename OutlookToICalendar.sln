@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookToICalendar", "OutlookToICalendar\OutlookToICalendar.csproj", "{A47AB4EA-13E6-45C6-A9F5-40299A8F6EA2}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutlookToICalendar", "OutlookToICalendar\OutlookToICalendar.csproj", "{A47AB4EA-13E6-45C6-A9F5-40299A8F6EA2}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FunctionAppPackage", "FunctionAppPackage\FunctionAppPackage.fsproj", "{3BECE940-6ADF-4755-82EF-6E49F5E79D23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{A47AB4EA-13E6-45C6-A9F5-40299A8F6EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A47AB4EA-13E6-45C6-A9F5-40299A8F6EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A47AB4EA-13E6-45C6-A9F5-40299A8F6EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BECE940-6ADF-4755-82EF-6E49F5E79D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BECE940-6ADF-4755-82EF-6E49F5E79D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BECE940-6ADF-4755-82EF-6E49F5E79D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BECE940-6ADF-4755-82EF-6E49F5E79D23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EA4130E-D1E4-45A4-A5F8-3BE511997518}
 	EndGlobalSection
 EndGlobal

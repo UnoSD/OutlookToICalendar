@@ -1,0 +1,5 @@
+encryptionsalt: v1:6xZ8se+wHhw=:v1:dSTJ/MZSGD0HJtBo:r6ZTb919Pp82Mi94f4CneSvT2X1VBw==
+config:
+  OutlookToICalendar:projectPublishPath: ../OutlookToICalendar/bin/Release/netcoreapp3.1/publish
+  OutlookToICalendar:workloadOrApplication: exp
+  azure-native:location: West Europe
