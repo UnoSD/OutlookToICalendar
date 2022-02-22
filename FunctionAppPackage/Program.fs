@@ -68,9 +68,9 @@ Deployment.run (fun () ->
                 subId
 
             return File.ReadAllText("LogicApp.parameters.json")
-                       .Replace("connectionId", connectionId)        
-                       .Replace("subscriptionId", subId)        
-                       .Replace("location", location)        
+                       .Replace("{connectionId}", connectionId)        
+                       .Replace("{subscriptionId}", subId)        
+                       .Replace("{location}", location)        
         }
 
     let logicAppJson =
@@ -91,8 +91,8 @@ Deployment.run (fun () ->
                 ))
 
             return File.ReadAllText("LogicApp.json")
-                       .Replace("functionId", functionId)
-                       .Replace("functionKey", result.MasterKey)
+                       .Replace("{functionId}", functionId + "/functions/GetICal")
+                       .Replace("{functionKey}", result.MasterKey)
         }
 
     let logicApp =
