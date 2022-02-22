@@ -28,7 +28,7 @@
           }
         },
         "method": "get",
-        "path": "/datasets/calendars/v4/tables/@{encodeURIComponent(encodeURIComponent('AAMkADE5YzJmMWU0LWYyZjQtNDdhYy05NGVlLWY3NzExMzNmZmJjMwBGAAAAAADCAzzss1EaS5kMjvJqQ1SYBwBjInS_lGXWSI_eGms86QMFAAAAAAEGAABjInS_lGXWSI_eGms86QMFAAAApKCqAAA='))}/items"
+        "path": "/datasets/calendars/v4/tables/@{encodeURIComponent(encodeURIComponent('{calendarId}'))}/items"
       },
       "runAfter": {},
       "type": "ApiConnection"

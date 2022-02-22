@@ -23,8 +23,9 @@ Deployment.run (fun () ->
             return result.SubscriptionId
         }
 
-    let workload, email =
+    let workload, calendarId, email =
         config.["workloadOrApplication"],
+        config.["calendarId"],
         config.["email"]
 
 
@@ -93,6 +94,7 @@ Deployment.run (fun () ->
             return File.ReadAllText("LogicApp.json")
                        .Replace("{functionId}", functionId + "/functions/GetICal")
                        .Replace("{functionKey}", result.MasterKey)
+                       .Replace("{calendarId}", calendarId)
         }
 
     let logicApp =
