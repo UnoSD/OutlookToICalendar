@@ -1,0 +1,7 @@
+﻿{
+  "office365": {
+    "connectionId": "{connectionId}",
+    "connectionName": "office365",
+    "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Web/locations/{location}/managedApis/office365"
+  }
+}

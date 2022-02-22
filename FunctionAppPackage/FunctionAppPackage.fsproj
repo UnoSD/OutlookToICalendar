@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="LogicApp.json" />
+    <None Include="LogicApp.parameters.json" />
     <Compile Include="FunctionAppPackage.fs" />
     <Compile Include="ComputationalExpression.fs" />
     <Compile Include="Program.fs" />

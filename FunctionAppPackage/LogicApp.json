@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "actions": {
+    "GetICal": {
+      "inputs": {
+        "body": "@body('Get_events_(V4)')",
+        "function": {
+          "id": "{functionId}"
+        },
+        "headers": {
+          "x-functions-key": "{functionKey}"
+        },
+        "method": "POST",
+        "queries": "@triggerOutputs()['queries']"
+      },
+      "runAfter": {
+        "Get_events_(V4)": [
+          "Succeeded"
+        ]
+      },
+      "type": "Function"
+    },
+    "Get_events_(V4)": {
+      "inputs": {
+        "host": {
+          "connection": {
+            "name": "@parameters('$connections')['office365']['connectionId']"
+          }
+        },
+        "method": "get",
+        "path": "/datasets/calendars/v4/tables/@{encodeURIComponent(encodeURIComponent('AAMkADE5YzJmMWU0LWYyZjQtNDdhYy05NGVlLWY3NzExMzNmZmJjMwBGAAAAAADCAzzss1EaS5kMjvJqQ1SYBwBjInS_lGXWSI_eGms86QMFAAAAAAEGAABjInS_lGXWSI_eGms86QMFAAAApKCqAAA='))}/items"
+      },
+      "runAfter": {},
+      "type": "ApiConnection"
+    },
+    "Response": {
+      "inputs": {
+        "body": "@body('GetICal')",
+        "statusCode": 200
+      },
+      "kind": "Http",
+      "runAfter": {
+        "GetICal": [
+          "Succeeded"
+        ]
+      },
+      "type": "Response"
+    }
+  },
+  "contentVersion": "1.0.0.0",
+  "outputs": {},
+  "parameters": {
+    "$connections": {
+      "defaultValue": {},
+      "type": "Object"
+    }
+  },
+  "triggers": {
+    "manual": {
+      "inputs": {
+        "method": "GET",
+        "schema": {}
+      },
+      "kind": "Http",
+      "type": "Request"
+    }
+  }
+}
